@@ -32,7 +32,7 @@ UI.prototype.videoControls = function(){
         btn.classList.add('btnSlide');
         document.querySelector('.video__item').pause();
     }else{
-        // btn.classList.remove('btnSlide');
-        // document.querySelector('.video__item').play();
+        btn.classList.remove('btnSlide');
+        document.querySelector('.video__item').play();
     }
 }
