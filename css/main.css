@@ -299,3 +299,52 @@ body{
 }
 
 /* drink section */
+.drink{
+    background: var(--brown);
+    color:var(--brightYellow);
+    text-transform: capitalize;
+}
+
+.drink-form, .drink-card{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 70%;
+    justify-content: center;
+    grid-row-gap: 1.25rem;
+}
+
+.drink-form__feedback{
+    border:0.1rem solid var(--brightYellow);
+    padding: 0.25rem;
+    display: none;
+}
+
+.error{
+    display: block;
+    color:red;
+    border-color:red;
+}
+
+.success{
+    display: block;
+    color: green;
+    border-color:green;
+}
+
+.drink-form__title, .drink-card__title{
+    font-size: 3rem;
+}
+
+.input-name, .input-lastname, .input-email{
+    width:100%;
+}
+
+.input-name, .input-lastname, .input-email, .input-submit{
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background: rgba(111,87,77,0.6);
+    color:var(--darkBrown);
+    border:none;
+    outline: none;
+}
