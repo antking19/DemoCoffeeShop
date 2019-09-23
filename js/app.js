@@ -26,7 +26,8 @@ function eventListener(){
         if(value){
             let customer = new Customer(name, lastName, email);
             ui.addItem(customer)
-            ui.showFeedback('custumer added to the list', 'success')
+            ui.showFeedback('custumer added to the list', 'success');
+            ui.clearFields()
         }else{
             ui.showFeedback('some form values empty','error')
         }
@@ -34,6 +35,12 @@ function eventListener(){
 }
 
 function UI(){}
+
+UI.prototype.clearFields = function(){
+    document.querySelector('.input-name').value = "";
+    document.querySelector('.input-lastname').value = "";
+    document.querySelector('.input-email').value = "";
+}
 
 UI.prototype.hidePreloader = function(){
     document.querySelector('.preloader').style.display = "none";
@@ -83,6 +90,7 @@ UI.prototype.removeAlert = function(type){
 
 UI.prototype.addItem = function(customer){
     let random = this.getRandom();
+    console.log(random)
     let list = document.querySelector('.drink-card__list');
     let div = document.createElement('div');
     div.classList.add('person');
