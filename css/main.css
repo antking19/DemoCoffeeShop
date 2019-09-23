@@ -348,3 +348,48 @@ body{
     border:none;
     outline: none;
 }
+
+.input-name::placeholder, .input-lastname::placeholder, .input-email::placeholder{
+    color:var(--darkBrown);
+    text-transform: capitalize
+}
+
+.input-submit{
+    background:var(--yellow);
+    color:var(--black);
+    transition: all 0.5s linear;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.input-submit:hover{
+    opacity: 0.8;
+}
+
+.drink-card__list{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 2rem;
+}
+
+.person{
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    text-align: left;
+    grid-gap: 1rem;
+    border:0.1rem solid rgba(111,87,77,0.6);
+    padding:1rem;
+    border-radius: 0.5rem;
+}
+
+.person__thumbnail{
+    border-radius: 50%;
+}
+
+@media screen and (min-width: 768px){
+    .drink-card__list{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem
+    }
+}
